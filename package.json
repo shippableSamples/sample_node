@@ -1,0 +1,34 @@
+{
+  "name": "sample-node-couchdb",
+  "version": "0.0.0",
+  "description": "Testing CouchDB service",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Shippable/sample_node.git"
+  },
+  "author": "Patrick Ellis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shippable/sample_node/issues"
+  },
+  "homepage": "https://github.com/Shippable/sample_node",
+  "dependencies": {
+    "express": "^4.2.0",
+    "nano": "^5.10.0",
+    "should": "^4.0.1"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "grunt": "^0.4.5",
+    "grunt-express-server": "^0.4.17",
+    "grunt-simple-mocha": "^0.4.0",
+    "istanbul": "^0.2.9",
+    "mocha": "^1.18.2",
+    "superagent": "^0.18.0",
+    "xunit-file": "0.0.5"
+  }
+}
