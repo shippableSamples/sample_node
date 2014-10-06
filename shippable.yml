@@ -17,9 +17,9 @@ before_script:
   - mkdir -p shippable/codecoverage
   
 before_install:
-  #- source ~/.nvm/nvm.sh && nvm install $SHIPPABLE_NODE_VERSION
   - node --version
   - npm install -g grunt-cli
+
 archive: true
 
 # Running the tests with grunt
@@ -38,3 +38,5 @@ notifications:
              - vidyac.raghav@gmail.com
          on_success: always
          on_failure: change
+
+commit_container: vidyar/sample_node
