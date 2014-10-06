@@ -1,3 +1,5 @@
+#build_image: shippableimages/ubuntu1204_nodejs
+
 # Language setting
 language: node_js
 
@@ -13,12 +15,15 @@ env:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  
+before_install:
+  - node --version
+  - npm install -g grunt-cli
 
 archive: true
 
 # Running the tests with grunt
 script:
- 
   - grunt
 
 # Tell istanbul to generate a coverage report
@@ -30,6 +35,8 @@ notifications:
      email:
          recipients:
              - vidya@shippable.com  
-             - vidyac.raghav@gmail.com
+             
          on_success: always
          on_failure: change
+
+commit_container: vidyar/sample_node
