@@ -1,4 +1,4 @@
-build_image: shippableimages/ubuntu1204_nodejs
+#build_image: shippableimages/ubuntu1204_nodejs
 
 # Language setting
 language: node_js
@@ -35,7 +35,7 @@ notifications:
      email:
          recipients:
              - vidya@shippable.com  
-             - vidyac.raghav@gmail.com
+             
          on_success: always
          on_failure: change
 
