@@ -20,7 +20,6 @@ archive: true
 
 # Running the tests with grunt
 script:
- 
   - grunt
 
 # Tell istanbul to generate a coverage report
