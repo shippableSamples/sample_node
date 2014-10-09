@@ -1,8 +1,6 @@
 # Language setting
 language: node_js
 
-#trying webhooks
-
 # Version number
 node_js:
   - 0.10.25
