@@ -1,12 +1,11 @@
 #Language setting
-language: cpp
+language: node_js
 
 #webhooks
 
 # Version number
 node_js:
   - 0.10.25
-  - 0.11
 
 # The path for Xunit to output test reports
 env:
