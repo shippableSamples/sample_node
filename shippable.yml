@@ -1,6 +1,5 @@
-octo-cat
-# Language setting
-language: node_js
+#Language setting
+language: cpp
 
 #webhooks
 
