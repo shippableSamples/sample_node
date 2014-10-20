@@ -1,4 +1,4 @@
-#Language setting
+# Language setting
 language: node_js
 
 #webhooks
@@ -24,3 +24,11 @@ script:
 after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+
+# E-mail Notifications
+notifications:
+     email:
+         recipients:
+             - pranay@shippable.com
+         on_success: always
+         on_failure: always
