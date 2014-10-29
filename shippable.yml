@@ -1,8 +1,6 @@
 # Language setting
 language: node_js
 
-#webhooks
-
 # Version number
 node_js:
   - 0.10.25
@@ -19,6 +17,11 @@ before_script:
 # Running the tests with grunt
 script:
   - grunt
+
+# include
+branches:
+  only:
+    - master
 
 # Tell istanbul to generate a coverage report
 after_script:
