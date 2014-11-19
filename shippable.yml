@@ -3,6 +3,7 @@
 # Language setting
 language: node_js
 
+
 # Version number
 node_js:
   - 0.10.25
@@ -21,8 +22,6 @@ before_install:
   - npm install -g grunt-cli
 
 archive: true
-
-
 # Running the tests with grunt
 script:
   - grunt
