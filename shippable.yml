@@ -1,9 +1,14 @@
+#build_image: shippableimages/ubuntu1204_nodejs
+
 # Language setting
 language: node_js
+
+#build_image: shippable/minv2:beta
 
 # Version number
 node_js:
   - 0.10.25
+  - 0.11
 
 # The path for Xunit to output test reports
 env:
@@ -13,12 +18,25 @@ env:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  
+before_install:
+  - node --version
+  - npm install -g grunt-cli
 
+
+archive: true
 # Running the tests with grunt
 script:
   - grunt
+  - echo $HEAD_BRANCH
+  - echo $BASE_BRANCH 
 
 # Tell istanbul to generate a coverage report
 after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+
+#cache: true 
+
+notifications:
+ email: false
