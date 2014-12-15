@@ -28,6 +28,8 @@ archive: true
 # Running the tests with grunt
 script:
   - grunt
+  - echo $HEAD_BRANCH
+  - echo $BASE_BRANCH 
 
 # Tell istanbul to generate a coverage report
 after_script:
