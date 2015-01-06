@@ -16,7 +16,7 @@ describe("Index", function () {
 
 describe("Update", function () {
   it("renders HTML", function (done) {
-    superagent.get("http://localhost:3000/2")
+    superagent.get("http://localhost:3000/test/")
       .end(function (e, res) {
         (e === null).should.equal(true);
         res.text.should.equal("this is an update");

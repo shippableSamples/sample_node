@@ -6,7 +6,7 @@ app.get("/", function (req, res) {
   res.send("Hey buddy!");
 });
 
-app.get("/2", fnction(req, res) {
+app.get("/test/", function(req, res) {
   res.send("this is an update")
 });
 
