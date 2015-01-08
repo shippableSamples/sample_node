@@ -14,44 +14,11 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
   - touch shippable/codecoverage/cobertura-coverage.xml
-  - echo '<?xml version="1.0" ?>
-<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="19"  lines-covered="19"  line-rate="1"  branches-valid="0"  branches-covered="0"  branch-rate="1"  timestamp="1420757434726" complexity="0" version="0.1">
-<sources>
-	<source>/home/shippable/workspace/src/github.com/trriplejay/sample_node</source>
-</sources>
-<packages>
-	<package name="sample_node"  line-rate="1"  branch-rate="1" >
-	<classes>
-		<class name="Gruntfile.js"  filename="Gruntfile.js"  line-rate="1"  branch-rate="1" >
-		<methods>
-			<method name="(anonymous_1)"  hits="1"  signature="()V" >
-				<lines><line number="3"  hits="1" /></lines>
-			</method>
-		</methods>
-		<lines>
-			<line number="25"  hits="1"  branch="false" />
-		</lines>
-		</class>
-		<class name="test.js"  filename="test.js"  line-rate="1"  branch-rate="1" >
-		<methods>
-			<method name="(anonymous_5)"  hits="1"  signature="()V" >
-				<lines><line number="18"  hits="1" /></lines>
-			</method>
-			<method name="(anonymous_6)"  hits="1"  signature="()V" >
-				<lines><line number="20"  hits="1" /></lines>
-			</method>
-		</methods>
-		<lines>
-			<line number="1"  hits="1"  branch="false" />
-			<line number="7"  hits="1"  branch="false" />
-			<line number="8"  hits="1"  branch="false" />
-		</lines>
-		</class>
-	</classes>
-	</package>
-</packages>
-</coverage>' > shippable/codecoverage/cobertura-coverage.xml
+  -	echo '<?xml version="1.0" ?>' >> shippable/codecoverage/cobertura-coverage.xml
+  -	echo '<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">' >> shippable/codecoverage/cobertura-coverage.xml
+  -	echo '<coverage lines-valid="19"  lines-covered="19"  line-rate="1"  branches-valid="0"  branches-covered="0"  branch-rate="1"  timestamp="1420757434726" complexity="0" version="0.1">' >> shippable/codecoverage/cobertura-coverage.xml
+  -	echo '</coverage>' >> shippable/codecoverage/cobertura-coverage.xml
+   
 
 # Running the tests with grunt
 script:
