@@ -16,6 +16,7 @@ before_script:
 
 # Running the tests with grunt
 script:
+  - echo 'do nothing'
 
 # Tell istanbul to generate a coverage report
 after_script:
