@@ -23,12 +23,12 @@ before_script:
 # Running the tests with grunt
 script:
   - echo 'grunt!'
-  - grunt
+  #- grunt
 
 # Tell istanbul to generate a coverage report
 after_script:
   - echo 'coverage'
-  - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-  - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+  #- ./node_modules/.bin/istanbul cover grunt -- -u tdd
+  #- ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
   - ls -la shippable/codecoverage/
   - cat shippable/codecoverage/cobertura-coverage.xml
