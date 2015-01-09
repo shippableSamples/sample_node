@@ -7,7 +7,11 @@ app.get("/", function (req, res) {
 });
 
 app.get("/test/", function(req, res) {
-  res.send("this is an update")
+  if (req){
+    res.send("this is an update")
+  } else {
+  	console.log("wtf happend?!")
+  }
 });
 
 app.listen(3000, function () {
