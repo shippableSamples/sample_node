@@ -29,6 +29,6 @@ script:
 after_script:
   - echo 'coverage'
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-  - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+  - ./node_modules/.bin/istanbul report cobertura --dir  shipable/codecoverage/
   - ls -la shipable/codecoverage/
   - cat shipable/codecoverage/cobertura-coverage.xml
