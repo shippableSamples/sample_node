@@ -7,12 +7,12 @@ node_js:
 
 # The path for Xunit to output test reports
 env:
-  - XUNIT_FILE=shippable/testresults/result.xml
+  - XUNIT_FILE=shipable/testresults/result.xml
 
 # Create directories for test and coverage reports
 before_script:
-  - mkdir -p shippable/testresults
-  - mkdir -p shippable/codecoverage
+  - mkdir -p shipable/testresults
+  - mkdir -p shipable/codecoverage
   #- touch shippable/codecoverage/cobertura-coverage.xml
   #-	echo '<?xml version="1.0" ?>' >> shippable/codecoverage/cobertura-coverage.xml
   #-	echo '<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">' >> shippable/codecoverage/cobertura-coverage.xml
@@ -30,5 +30,5 @@ after_script:
   - echo 'coverage'
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
-  - ls -la shippable/codecoverage/
-  - cat shippable/codecoverage/cobertura-coverage.xml
+  - ls -la shipable/codecoverage/
+  - cat shipable/codecoverage/cobertura-coverage.xml
