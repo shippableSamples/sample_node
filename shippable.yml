@@ -8,6 +8,10 @@ node_js:
 # The path for Xunit to output test reports
 env:
   - XUNIT_FILE=shipable/testresults/result.xml
+  
+nofitications:
+  email:
+    - on_success: 'always'
 
 # Create directories for test and coverage reports
 before_script:
