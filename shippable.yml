@@ -11,6 +11,8 @@ env:
   
 nofitications:
   email:
+    recipients:
+      - john@shippable.com
     on_success: 'always'
 
 # Create directories for test and coverage reports
