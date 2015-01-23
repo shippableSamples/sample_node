@@ -11,7 +11,7 @@ env:
   
 nofitications:
   email:
-    - on_success: 'always'
+    on_success: 'always'
 
 # Create directories for test and coverage reports
 before_script:
