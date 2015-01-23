@@ -9,7 +9,7 @@ node_js:
 env:
   - XUNIT_FILE=shipable/testresults/result.xml
   
-nofitications:
+notifications:
   email:
     recipients:
       - john@shippable.com
