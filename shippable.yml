@@ -19,6 +19,7 @@ notifications:
 before_script:
   - mkdir -p shipable/testresults
   - mkdir -p shipable/codecoverage
+  - echo 'really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line '
   #- touch shippable/codecoverage/cobertura-coverage.xml
   #-	echo '<?xml version="1.0" ?>' >> shippable/codecoverage/cobertura-coverage.xml
   #-	echo '<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">' >> shippable/codecoverage/cobertura-coverage.xml
