@@ -1,5 +1,8 @@
 # Language setting
-language: node_js
+language: 
+  - node_js
+  - another_lang
+  
 build_image: shippable/minv2
 # Version number
 node_js:
