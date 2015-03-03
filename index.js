@@ -11,7 +11,6 @@ app.get("/test/", function(req, res) {
     res.send("this is an update")
   } else {
   	console.log("wtf happend?!")
-  	console.log("I don't know...")
   }
 });
 
