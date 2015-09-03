@@ -35,7 +35,8 @@ before_script:
 script:
   - echo 'grunt!'
   - grunt
-  - exit 1
+  - exit 1 && exit 1
+  - echo 'hello world'
 
 # Tell istanbul to generate a coverage report
 after_script:
