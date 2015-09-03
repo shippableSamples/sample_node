@@ -8,6 +8,8 @@ node_js:
   
 archive: true
 
+cache: true
+
 # The path for Xunit to output test reports
 env:
   - XUNIT_FILE=shipable/testresults/result.xml
