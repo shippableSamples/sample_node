@@ -16,10 +16,12 @@ before_script:
 
 # Running the tests with grunt
 script:
+  - npm install
   - ls $SHIPPABLE_REPO_DIR
-  - grunt
+  - ls /home/node/node_modules
+  - cd /home/node && grunt
 
 # Tell istanbul to generate a coverage report
 after_script:
-  - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-  - ./node_modules/.bin/istanbul report cobertura --dir  /home/node/shippable/codecoverage/
+  - cd /home/node && ./node_modules/.bin/istanbul cover grunt -- -u tdd
+  - cd /home/node && ./node_modules/.bin/istanbul report cobertura --dir  /home/node/shippable/codecoverage/
