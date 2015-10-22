@@ -15,11 +15,14 @@ env:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - source /root/.bashrc
+  - source ~/.nvm/nvm.sh && nvm install $SHIPPABLE_NODE_VERSION
+  - node --version
+
+install:
+  - npm install
 
 # Running the tests with grunt
 script:
-  - npm install
   - grunt
 
 # Tell istanbul to generate a coverage report
