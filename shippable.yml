@@ -15,6 +15,7 @@ env:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - . /root/.bashrc
 
 # Running the tests with grunt
 script:
