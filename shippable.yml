@@ -15,7 +15,7 @@ env:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - source ~/.nvm/nvm.sh && nvm install $SHIPPABLE_NODE_VERSION
+  - source ~/.nvm/nvm.sh && nvm install 4.0.0
   - node --version
   - npm install -g grunt-cli
   - npm install
