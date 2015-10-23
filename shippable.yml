@@ -5,20 +5,21 @@ build_image: drydock/u12nod:prod
 
 # Version number
 node_js:
-  - 0.10.25
+  - 0.12
 
 # The path for Xunit to output test reports
 env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
+install:
+  - source ~/.nvm/nvm.sh && nvm install 4.0.0
+  - node --version
+  - npm install
+
 # Create directories for test and coverage reports
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - source ~/.nvm/nvm.sh && nvm install 4.0.0
-  - node --version
-  - npm install -g grunt-cli
-  - npm install
 
 # Running the tests with grunt
 script:
