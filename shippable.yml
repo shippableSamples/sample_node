@@ -17,6 +17,7 @@ before_script:
   - mkdir -p shippable/codecoverage
   - source ~/.nvm/nvm.sh && nvm install $SHIPPABLE_NODE_VERSION
   - node --version
+  - npm install -g grunt-cli
   - npm install
 
 # Running the tests with grunt
