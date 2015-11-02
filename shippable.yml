@@ -9,7 +9,7 @@ node_js:
 
 # The path for Xunit to output test reports
 env:
-  - XUNIT_FILE=shippable/testresults/result.xml
+  - XUNIT_FILE=/home/node/shippable/testresults/result.xml
 
 install:
   - source ~/.nvm/nvm.sh && nvm install 4.0.0
@@ -18,14 +18,17 @@ install:
 
 # Create directories for test and coverage reports
 before_script:
-  - mkdir -p shippable/testresults
-  - mkdir -p shippable/codecoverage
+  - mkdir -p /home/node/shippable/testresults
+  - mkdir -p /home/node/shippable/codecoverage
 
 # Running the tests with grunt
 script:
-  - grunt
+  - npm install
+  - ls $SHIPPABLE_REPO_DIR
+  - ls /home/node/node_modules
+  - cd /home/node && grunt
 
 # Tell istanbul to generate a coverage report
 after_script:
-  - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-  - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+  - cd /home/node && ./node_modules/.bin/istanbul cover grunt -- -u tdd
+  - cd /home/node && ./node_modules/.bin/istanbul report cobertura --dir  /home/node/shippable/codecoverage/
