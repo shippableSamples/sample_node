@@ -16,6 +16,7 @@ install:
   - node --version
   - npm install
   - . installMongo.sh
+  - cat /etc/mongod.conf
   - sudo service mongod restart || true
   - sleep 15
   - mongo --eval 'db.collection.find()'
