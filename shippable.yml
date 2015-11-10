@@ -15,7 +15,7 @@ install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
   - node --version
   - npm install
-  - ./installMongo.sh
+  - . installMongo.sh
   - sleep 10
   - mongo --eval 'db.collection.find()'
 
