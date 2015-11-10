@@ -16,7 +16,8 @@ install:
   - node --version
   - npm install
   - . installMongo.sh
-  - sleep 10
+  - sudo service mongod restart || true
+  - sleep 15
   - mongo --eval 'db.collection.find()'
 
 # Create directories for test and coverage reports
