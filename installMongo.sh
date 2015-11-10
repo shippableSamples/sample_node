@@ -19,3 +19,4 @@ sudo echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 sudo sed -i 's/#port = 27017/port = 27017/' /etc/mongod.conf
 sudo sed -i 's/bind_ip = 127.0.0.1/bind_ip = 0.0.0.0/' /etc/mongod.conf
 sudo sed -i 's/# nojournal = true/nojournal = true/' /etc/mongod.conf
+sudo sed -i 's/#noprealloc = true/noprealloc = true/' /etc/mongod.conf
