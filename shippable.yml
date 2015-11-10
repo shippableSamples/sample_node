@@ -12,9 +12,12 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
 install:
-  - source ~/.nvm/nvm.sh && nvm install 4.0.0
+  - source ~/.nvm/nvm.sh && nvm install 0.12
   - node --version
   - npm install
+  - ./installMongo.sh
+  - sleep 10
+  - mongo --eval 'db.collection.find()'
 
 # Create directories for test and coverage reports
 before_script:
