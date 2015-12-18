@@ -1,49 +1,36 @@
 # Language setting
 language: node_js
-  
-#build_image: shippable/minv2
+
+build_image: drydock/u12nod:prod
+
 # Version number
 node_js:
-  - 0.10.25
-  
-archive: true
-
-cache: true
+  - 0.12
 
 # The path for Xunit to output test reports
 env:
-  - XUNIT_FILE=shipable/testresults/result.xml
-  
-notifications:
-  email:
-    recipients:
-      - john@shippable.com
-    on_success: always
+  - XUNIT_FILE=shippable/testresults/result.xml
+
+install:
+  - source ~/.nvm/nvm.sh && nvm install 0.12
+  - node --version
+  - npm install
+  - . installMongo.sh
+  - cat /etc/mongod.conf
+  - sudo mongod --smallfiles &
+  - sleep 15
+  - mongo --eval 'db.collection.find()'
 
 # Create directories for test and coverage reports
 before_script:
-  - mkdir -p shipable/testresults
-  - mkdir -p shipable/codecoverage
-  - echo 'really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line really long line '
-  - touch shippable/codecoverage/cobertura-coverage.xml
-  -	echo '<?xml version="1.0" ?>' >> shippable/codecoverage/cobertura-coverage.xml
-  -	echo '<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">' >> shippable/codecoverage/cobertura-coverage.xml
-  -	echo '<coverage lines-valid="19"  lines-covered="15"  line-rate="1"  branches-valid="0"  branches-covered="0"  branch-rate="1"  timestamp="1420757434726" complexity="0" version="0.1">' >> shippable/codecoverage/cobertura-coverage.xml
-  -	echo '</coverage>' >> shippable/codecoverage/cobertura-coverage.xml
-  - echo 'failure'
-   
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
 
 # Running the tests with grunt
 script:
-  - echo 'grunt!'
   - grunt
-  - exit 0
-  - echo 'hello world'
 
 # Tell istanbul to generate a coverage report
 after_script:
-  - echo 'coverage'
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-  - ./node_modules/.bin/istanbul report cobertura --dir  shipable/codecoverage/
-  - ls -la shipable/codecoverage/
-  - cat shipable/codecoverage/cobertura-coverage.xml
+  - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
