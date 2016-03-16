@@ -1,8 +1,6 @@
 # Language setting
 language: node_js
 
-build_image: drydock/u12nod:prod
-
 # Version number
 node_js:
   - 0.12
@@ -11,7 +9,6 @@ node_js:
 env:
   global:
     - XUNIT_FILE=shippable/testresults/result.xml
-    - test=webhook
 
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
