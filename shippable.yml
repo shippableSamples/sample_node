@@ -11,6 +11,7 @@ node_js:
 env:
   global:
     - XUNIT_FILE=shippable/testresults/result.xml
+    - test=webhook
 
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
