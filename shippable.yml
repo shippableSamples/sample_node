@@ -12,8 +12,7 @@ env:
   global:
     - XUNIT_FILE=shippable/testresults/result.xml
     - bad=env
-    - test={\"hmm\":\"maybe?\"}
-    - hmmmm=''\\"\'|''"\!!!2?/\''
+    - 123Bad=nope
 
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
