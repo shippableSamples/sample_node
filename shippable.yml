@@ -11,6 +11,7 @@ node_js:
 env:
   global:
     - XUNIT_FILE=shippable/testresults/result.xml
+    - hmmmm=''\\"\'|''"\!!!2?/\''
     - test={\"hmm\":\"maybe?\"}
 
 install:
