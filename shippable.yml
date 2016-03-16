@@ -11,8 +11,7 @@ node_js:
 env:
   global:
     - XUNIT_FILE=shippable/testresults/result.xml
-    - hmmmm=''\\"\'|''"\!!!2?/\''
-    - test={\"hmm\":\"maybe?\"}
+    - 123Bad
 
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
