@@ -11,6 +11,7 @@ node_js:
 env:
   global:
     - XUNIT_FILE=shippable/testresults/result.xml
+    - 123Bad=test
     - secure: msrEuUXFECLFuKiOrsbU3Dxm5fJdLY2ZMTM6uewIGKsWt2XZ/HkU0Hx5iCjk1HQqmqxHwQ29nac5OMSCpuoZMVY1JJu5MbwtnDHN8PoY/Vp7cUkhnRoePa2PjZOaKCD1yXw7mLLhIJK1zv0ziRCB/tRphfrTPzx17nrEqgABaiOZ0eNGGdBSzgv4IROGbN7FZ+oK4Dr2rSPCO1hBIKRFHVNnl26/jrEJWXTnVXi6UwF0Q9njPwLvexVn+vr5lo9o3QhNKVnMt7aE2h1e52zkbdu/xxxmX9n0MXsDJ/s+hrfa4qVvv6B/r7B2od7KqM+PHukQsGGMBdNyOkXfQvCjNw==
 
 install:
