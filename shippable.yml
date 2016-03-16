@@ -1,6 +1,7 @@
 # Language setting
 language: node_js
 
+build_image: shippable/minv2:latest
 # Version number
 node_js:
   - 0.12
