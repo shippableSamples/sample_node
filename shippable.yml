@@ -16,6 +16,7 @@ install:
   - echo "$HOME"
   #- source ~/.nvm/nvm.sh && nvm install 0.12
   - node --version
+  - sudo npm install -g grunt-cli
   - sudo npm install
   #- . installMongo.sh
   #- cat /etc/mongod.conf
