@@ -1,7 +1,7 @@
 # Language setting
 language: node_js
 
-build_image: trriplejay/simpleserver:latest
+build_image: magwas/edemotest:master
 # Version number
 node_js:
   - 0.10
