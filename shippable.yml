@@ -1,36 +1,36 @@
-# Language setting
-# language: node_js
+Language setting
+language: node_js
 
-# build_image: drydock/u12nod:prod
+build_image: drydock/u12nod:prod
 
-# # Version number
-# node_js:
-#   - 0.12
+# Version number
+node_js:
+  - 0.12
 
-# # The path for Xunit to output test reports
-# env:
-#   - XUNIT_FILE=shippable/testresults/result.xml
+# The path for Xunit to output test reports
+env:
+  - XUNIT_FILE=shippable/testresults/result.xml
 
-# install:
-#   # - source ~/.nvm/nvm.sh && nvm install 0.12
-#   # - node --version
-#   # - npm install
-# #  - . installMongo.sh
-# #  - cat /etc/mongod.conf
-# #  - sudo mongod --smallfiles &
-# #  - sleep 15
-# #  - mongo --eval 'db.collection.find()'
+install:
+  # - source ~/.nvm/nvm.sh && nvm install 0.12
+  # - node --version
+  # - npm install
+#  - . installMongo.sh
+#  - cat /etc/mongod.conf
+#  - sudo mongod --smallfiles &
+#  - sleep 15
+#  - mongo --eval 'db.collection.find()'
 
-# # Create directories for test and coverage reports
-# before_script:
-#   - mkdir -p shippable/testresults
-#   - mkdir -p shippable/codecoverage
+# Create directories for test and coverage reports
+before_script:
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
 
-# # Running the tests with grunts
-# script:
-#   - grunt
+# Running the tests with grunts
+script:
+  - grunt
 
-# # Tell istanbul to generate a coverage report
+# Tell istanbul to generate a coverage report
 after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
