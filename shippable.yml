@@ -1,7 +1,7 @@
 # Language setting
 language: node_js
 
-# build_image: drydock/u12nod:prod
+build_image: drydock/u12nod:prod
 
 # Version number
 node_js:
@@ -12,9 +12,9 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
 
 install:
-  - source ~/.nvm/nvm.sh && nvm install 0.12
-  - node --version
-  - npm install
+  # - source ~/.nvm/nvm.sh && nvm install 0.12
+  # - node --version
+  # - npm install
 #  - . installMongo.sh
 #  - cat /etc/mongod.conf
 #  - sudo mongod --smallfiles &
