@@ -21,7 +21,7 @@ install:
 #  - sleep 15
 #  - mongo --eval 'db.collection.find()'
 
-# Create directories for test and coverage reports
+# Create directories for test and coverage report
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
