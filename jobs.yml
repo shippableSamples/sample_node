@@ -11,4 +11,4 @@ jobs:
       type: build
       steps:
         - GET resource1
-        - GET resource2
+        - GET resource3
