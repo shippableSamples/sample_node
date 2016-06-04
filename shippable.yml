@@ -1,4 +1,4 @@
-# Language setting
+#Language setting
 language: node_js
 
 build_image: drydock/u12nod:prod
@@ -26,7 +26,7 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
-# Running the tests with grunt
+# Running the tests with grunts
 script:
   - grunt
 

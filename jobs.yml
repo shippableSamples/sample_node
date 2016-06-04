@@ -1,0 +1,6 @@
+jobs:
+  - job:
+      name : job1
+      type: build
+      steps:
+        - GET resource1
