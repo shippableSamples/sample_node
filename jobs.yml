@@ -4,9 +4,3 @@ jobs:
       type: build
       steps:
         - GET resource1
-
-  - job:
-      name : job2
-      type: build
-      steps:
-        - GET resource1
