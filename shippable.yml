@@ -15,7 +15,7 @@ install:
   - echo "$USER"
   - echo "$HOME"
   - sudo docker ps -a
-  - EXEC_ID=`docker ps | grep -exec- | awk '{print $1}'`
+  - EXEC_ID=`sudo docker ps | grep shippable-exec | awk '{print $1}'`
   - sudo docker logs --tail=500 $EXEC_ID
   - sudo docker inspect $EXEC_ID
   #- source ~/.nvm/nvm.sh && nvm install 0.12
