@@ -22,3 +22,15 @@ script:
 after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+  
+integrations:     
+  notifications:
+    - integrationName: slack-error-test
+      type: slack
+      recipients:
+    #    - "#niraj93"
+        - "#test-channel" 
+    #  on_start: never
+      on_success: change
+      on_failure: change
+    #  on_pull_request: change
