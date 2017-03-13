@@ -1,8 +1,6 @@
 # Language setting
 language: node_js
 
-build_image: drydock/u12nod:prod
-
 # Version number
 node_js:
   - 0.12
