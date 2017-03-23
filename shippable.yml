@@ -30,6 +30,13 @@ before_script:
 script:
   - grunt
 
+#PR test
+
+# include
+branches:
+  only:
+    - master
+
 # Tell istanbul to generate a coverage report
 after_script:
   - ./node_modules/.bin/istanbul cover grunt -- -u tdd
